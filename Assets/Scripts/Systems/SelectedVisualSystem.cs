@@ -10,17 +10,17 @@ partial struct SelectedVisualSystem : ISystem
     {
         foreach (RefRO<Selected> selected in SystemAPI.Query<RefRO<Selected>>().WithPresent<Selected>())
         {
-            if (selected.ValueRO.onSelected)
-            {
-                //UnityEngine.Debug.Log("onSelected");
-                RefRW<LocalTransform> visualLocalTransform = SystemAPI.GetComponentRW<LocalTransform>(selected.ValueRO.visualEntity);
-                visualLocalTransform.ValueRW.Scale = selected.ValueRO.showScale;
-            }
             if (selected.ValueRO.onDeselected)
             {
                 //UnityEngine.Debug.Log("onDEselected");
                 RefRW<LocalTransform> visualLocalTransform = SystemAPI.GetComponentRW<LocalTransform>(selected.ValueRO.visualEntity);
                 visualLocalTransform.ValueRW.Scale = 0;
+            }
+            if (selected.ValueRO.onSelected)
+            {
+                //UnityEngine.Debug.Log("onSelected");
+                RefRW<LocalTransform> visualLocalTransform = SystemAPI.GetComponentRW<LocalTransform>(selected.ValueRO.visualEntity);
+                visualLocalTransform.ValueRW.Scale = selected.ValueRO.showScale;
             }
 
         }
