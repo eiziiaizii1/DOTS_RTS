@@ -10,14 +10,10 @@ partial struct TestingSystem : ISystem
     public void OnUpdate(ref SystemState state)
     {
         //int unitCount = 0;
-        //foreach ((
-        //    RefRW<LocalTransform> localTransform,
-        //    RefRO<UnitMover> unitMover,
-        //    RefRW<PhysicsVelocity> physicsVelocity)
+        //foreach (
+        //    RefRW<Zombie> friendly
         //    in SystemAPI.Query<
-        //        RefRW<LocalTransform>,
-        //        RefRO<UnitMover>,
-        //        RefRW<PhysicsVelocity>>().WithPresent<Selected>())
+        //        RefRW<Zombie>>())
         //{
         //    unitCount++;
         //}
