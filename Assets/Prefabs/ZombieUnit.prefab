@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5825754439801043560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3803940509024154054}
+  m_Layer: 6
+  m_Name: HitPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3803940509024154054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5825754439801043560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.096, y: 2.275, z: 0.091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7326268558864044974}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6826894838257110112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -74,11 +105,17 @@ PrefabInstance:
       objectReference: {fileID: 4300000, guid: b6815ab17cf31b645b33d7e67d00ce14, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4256502941096550350, guid: 338f785deef84dc4abc4665e109a7761, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3803940509024154054}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4449583024182174886, guid: 338f785deef84dc4abc4665e109a7761, type: 3}
       insertIndex: -1
       addedObject: {fileID: -805903359283151869}
+    - targetCorrespondingSourceObject: {fileID: 4449583024182174886, guid: 338f785deef84dc4abc4665e109a7761, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8334816064992699914}
   m_SourcePrefab: {fileID: 100100000, guid: 338f785deef84dc4abc4665e109a7761, type: 3}
 --- !u!1 &7169194598542076102 stripped
 GameObject:
@@ -97,3 +134,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f4136da09a0c847858c95ed32ffac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8334816064992699914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169194598542076102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90492f10e08a0c5468e74dace280be56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPositionTransform: {fileID: 3803940509024154054}
+--- !u!4 &7326268558864044974 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4256502941096550350, guid: 338f785deef84dc4abc4665e109a7761, type: 3}
+  m_PrefabInstance: {fileID: 6826894838257110112}
+  m_PrefabAsset: {fileID: 0}
