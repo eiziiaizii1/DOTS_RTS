@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -252,9 +252,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZombieUnit
       objectReference: {fileID: 0}
+    - target: {fileID: 7169194598542076102, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7326268558864044974, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 7326268558864044974, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -262,7 +266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7326268558864044974, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9
+      value: 2.68
       objectReference: {fileID: 0}
     - target: {fileID: 7326268558864044974, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -339,6 +343,10 @@ PrefabInstance:
     - target: {fileID: 7169194598542076102, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
       propertyPath: m_Name
       value: ZombieUnit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169194598542076102, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7326268558864044974, guid: fee004dbd6da7034ca70923df13c3ca6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -442,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -549,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -610,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -671,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -722,7 +730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1632048690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,6 +744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerMax: 1.5
+  randomWalkingDistanceMin: 3
+  randomWalkingDistanceMax: 10
 --- !u!4 &1632048691
 Transform:
   m_ObjectHideFlags: 0
@@ -805,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8366044625155971255, guid: 2623e52c8bb70a648b5dad8487cf3d6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
