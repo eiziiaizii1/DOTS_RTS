@@ -9,6 +9,9 @@ partial struct ZombieSpawnerSystem : ISystem
     {
         EntitiesReferences entitiesReferences = SystemAPI.GetSingleton<EntitiesReferences>();
 
+        EntityCommandBuffer entityCommandBuffer =
+            SystemAPI.GetSingleton<EndSimulationEntityCommandBufferSystem.Singleton>().CreateCommandBuffer(state.WorldUnmanaged);
+
         foreach((
             RefRO<LocalTransform> localTransform, 
             RefRW <ZombieSpawner> zombieSpawner) 
@@ -25,6 +28,15 @@ partial struct ZombieSpawnerSystem : ISystem
 
             Entity zombieEntity = state.EntityManager.Instantiate(entitiesReferences.zombiePrefabEntity);
             SystemAPI.SetComponent(zombieEntity, LocalTransform.FromPosition(localTransform.ValueRO.Position));
+
+            entityCommandBuffer.AddComponent(zombieEntity, new RandomWalking
+            {
+                originPosition = localTransform.ValueRO.Position,
+                targetPosition = localTransform.ValueRO.Position,
+                distanceMin = zombieSpawner.ValueRO.randomWalkingDistanceMin,
+                distanceMax = zombieSpawner.ValueRO.randomWalkingDistanceMax,
+                random = new Unity.Mathematics.Random((uint)zombieEntity.Index)
+            });
         }
     }
 }

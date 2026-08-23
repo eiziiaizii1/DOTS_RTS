@@ -4,6 +4,8 @@ using UnityEngine;
 public class ZombieSpawnerAuthoring : MonoBehaviour
 {
     public float timerMax;
+    public float randomWalkingDistanceMin;
+    public float randomWalkingDistanceMax;
 
     public class Baker : Baker<ZombieSpawnerAuthoring>
     {
@@ -13,6 +15,9 @@ public class ZombieSpawnerAuthoring : MonoBehaviour
             AddComponent(entity, new ZombieSpawner
             {
                 timerMax = authoring.timerMax,
+                randomWalkingDistanceMax = authoring.randomWalkingDistanceMax,
+                randomWalkingDistanceMin = authoring.randomWalkingDistanceMin,
+
             });
         }
     }
@@ -22,4 +27,6 @@ public struct ZombieSpawner: IComponentData
 {
     public float timerMax;
     public float timer;
+    public float randomWalkingDistanceMin;
+    public float randomWalkingDistanceMax;
 }
