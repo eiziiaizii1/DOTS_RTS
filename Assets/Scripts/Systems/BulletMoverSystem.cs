@@ -45,8 +45,8 @@ partial struct BulletMoverSystem : ISystem
                 localTransform.ValueRW.Position = targetPosition;
             }
 
-            float destorDistanceSq = .2f;
-            if (math.distance(localTransform.ValueRO.Position, targetPosition) < destorDistanceSq)
+            float destroyDistanceSq = .2f;
+            if (math.distance(localTransform.ValueRO.Position, targetPosition) < destroyDistanceSq)
             {
                 RefRW<Health> targetHealth = SystemAPI.GetComponentRW<Health>(target.ValueRO.targetEntity);
                 targetHealth.ValueRW.healthAmount -= bullet.ValueRO.damageAmount;
