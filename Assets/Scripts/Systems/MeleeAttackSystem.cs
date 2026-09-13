@@ -23,7 +23,7 @@ partial struct MeleeAttackSystem : ISystem
                 RefRO<LocalTransform>,
                 RefRW<MeleeAttack>,
                 RefRW<Target>,
-                RefRW<UnitMover>>())
+                RefRW<UnitMover>>().WithDisabled<MoveOverride>())
         {
             if (target.ValueRO.targetEntity == Entity.Null)
             {
